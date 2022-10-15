@@ -11,7 +11,7 @@ Foi recebido uma lista com produtos disponíveis em formato csv com seus respect
 
 <h3 align="center">
 
-[🔗Documentação da API](#🔗link-Documentação-Postman) | [💻Projeto](#💻como-rodar-o-projeto-localmente) | [🛠️Tecnologias](#tecnologias-utilizadas) | [👩🏻‍💻Desenvolvedora](#👩🏻‍💻desenvolvedora)
+[🔗Documentação da API](#link-Documentação-Postman) | [💻Projeto](#como-rodar-o-projeto-localmente) | [🛠️Tecnologias](#tecnologias-utilizadas) | [👩🏻‍💻Desenvolvedora](#👩🏻‍💻desenvolvedora)
 
 </h3>
 
