@@ -1,0 +1,66 @@
+### 1) Get all products
+GET https://case-shopper-jil.herokuapp.com/product/all/2
+
+// https://case-shopper-jil.herokuapp.com/product/all/1/?search=ener
+
+### 2) Get product by id
+GET https://case-shopper-jil.herokuapp.com/product/byId/79
+Content-Type: application/json
+
+{
+    "id": "79"
+}
+
+### 3) POST cart
+POST http://localhost:3003/cart/create
+Content-Type: application/json
+
+{
+    "client_name": "Mia",
+    "delivery_date": "2022/12/12"
+}
+
+### 4) Post purchase
+POST http://localhost:3003/product/purchase
+Content-Type: application/json
+
+{
+"id_cart": "5eb45432-1d8a-465d-af2f-d6a0593d5d18",
+"id_product": "79",
+"price": 7.99,
+"name": "ÁGUA MINERAL SEM GÁS CRYSTAL GARRAFÃO 5L"
+}
+
+### 5) Put add purchase
+PUT https://case-shopper-jil.herokuapp.com/product/addOnPurchase
+Content-Type: application/json
+
+{
+"id_product": "79",
+"id_purchase": "b65afa32-4079-4707-a229-b424bce497f4"
+}
+
+### 6) Put sub purchase
+PUT https://case-shopper-jil.herokuapp.com/product/subOnPurchase
+Content-Type: application/json
+
+{
+"id_product": "92",
+"id_purchase": "76d432e4-c62d-4a40-b04c-2769de37ad48"
+}
+
+### 7) Get all purchase
+GET http://localhost:3003/product/allPurchase/5eb45432-1d8a-465d-af2f-d6a0593d5d18
+
+### 8) Put all purchase balance
+PUT https://case-shopper-jil.herokuapp.com/cart/balance
+Content-Type: application/json
+
+{
+"id_cart": "5eb45432-1d8a-465d-af2f-d6a0593d5d18"
+}
+
+### 9) Del purchase
+DELETE http://localhost:3003/product/delPurchase/fb47de77-af03-45db-ae91-7fb2bd13cfc6
+
+##############################
