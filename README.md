@@ -11,7 +11,7 @@ Foi recebido uma lista com produtos disponíveis em formato csv com seus respect
 
 <h3 align="center">
 
-[🔗Documentação da API](#link-documentação-postman) | [💻Projeto](#como-rodar-o-projeto-localmente) | [🛠️Tecnologias](#tecnologias-utilizadas) | [👩🏻‍💻Desenvolvedora](#desenvolvedora)
+[🔗Documentação da API](#link-documentação-postman) | [💻Projeto](#como-rodar-o-projeto-localmente) | [🛠️Tecnologias](#tecnologias-bibliotecas-e-aplicações-utilizadas) | [👩🏻‍💻Desenvolvedora](#desenvolvedora)
 
 </h3>
 
@@ -48,7 +48,7 @@ DB_DATABASE = (edite aqui e coloque o nome do banco de dados)
 
 Por padrão a aplicação rodará localmente na porta 3000.
 
-## 🛠Tecnologias Bibliotecas e aplicações Utilizadas
+## 🛠Tecnologias Bibliotecas e Aplicações Utilizadas
 
  <div style="display: inline_block"><br>
   <img align="center" alt="NodeJS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
