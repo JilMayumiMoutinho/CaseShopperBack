@@ -26,7 +26,7 @@ Foi recebido uma lista com produtos disponíveis em formato csv com seus respect
 
 ## 🔗Link Documentação Postman
 
-- https://documenter.getpostman.com/view/21554465/2s83zfQkaS#intro
+- https://documenter.getpostman.com/view/21554465/2s83zfQkaS
 
 ## 💻Como Rodar o Projeto Localmente
 
