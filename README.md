@@ -26,7 +26,7 @@ Foi recebido uma lista com produtos disponíveis em formato csv com seus respect
 
 ## 🔗Link Documentação - Postman
 
-- http://pokebattle-pokedex.surge.sh
+- https://documenter.getpostman.com/view/21554465/2s83zfQkaS#intro
 
 ## 💻Como Rodar o Projeto Localmente
 
@@ -58,8 +58,9 @@ Por padrão a aplicação rodará localmente na porta 3000.
   <img align="center" alt="MySQL" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain.svg">
   <img align="center" alt="Postman" height="30" width="40" src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg">
   <img align="center" alt="Heroku" height="30" width="40" src="https://www.svgrepo.com/show/353869/heroku-icon.svg">
+  |  Express  |   Cors   |
 </div>
-|  Express  |   Cors   |
+
 
 <h2 align="center">
 
