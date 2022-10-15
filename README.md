@@ -11,7 +11,7 @@ Foi recebido uma lista com produtos disponíveis em formato csv com seus respect
 
 <h3 align="center">
 
-[🔗Documentação da API](#link-Documentação-Postman) | [💻Projeto](#como-rodar-o-projeto-localmente) | [🛠️Tecnologias](#tecnologias-utilizadas) | [👩🏻‍💻Desenvolvedora](#👩🏻‍💻desenvolvedora)
+[🔗Documentação da API](#link-documentação-postman) | [💻Projeto](#como-rodar-o-projeto-localmente) | [🛠️Tecnologias](#tecnologias-utilizadas) | [👩🏻‍💻Desenvolvedora](#desenvolvedora)
 
 </h3>
 
@@ -24,7 +24,7 @@ Foi recebido uma lista com produtos disponíveis em formato csv com seus respect
   - O usúario recebe um alert caso tente adicionar mais itens do que há disponível em estoque (Erro na requisição de adiconar ao carrinho).
   - Requisição de calculo do valor total das compras.
 
-## 🔗Link Documentação - Postman
+## 🔗Link Documentação Postman
 
 - https://documenter.getpostman.com/view/21554465/2s83zfQkaS#intro
 
