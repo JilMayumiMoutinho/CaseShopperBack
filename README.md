@@ -11,7 +11,7 @@ Foi recebido uma lista com produtos disponíveis em formato csv com seus respect
 
 <h3 align="center">
 
-[🔗Documentação da API](#🔗link-Documentação-Postman) | [💻Projeto](#💻como-rodar-o-projeto-localmente) | [🛠️Tecnologias](#tecnologias-utilizadas) | [👩🏻‍💻Desenvolvedora](#👩🏻‍💻desenvolvedora)
+[🔗Documentação da API](#link-documentação-postman) | [💻Projeto](#como-rodar-o-projeto-localmente) | [🛠️Tecnologias](#tecnologias-bibliotecas-e-aplicações-utilizadas) | [👩🏻‍💻Desenvolvedora](#desenvolvedora)
 
 </h3>
 
@@ -24,9 +24,9 @@ Foi recebido uma lista com produtos disponíveis em formato csv com seus respect
   - O usúario recebe um alert caso tente adicionar mais itens do que há disponível em estoque (Erro na requisição de adiconar ao carrinho).
   - Requisição de calculo do valor total das compras.
 
-## 🔗Link Documentação - Postman
+## 🔗Link Documentação Postman
 
-- http://pokebattle-pokedex.surge.sh
+- https://documenter.getpostman.com/view/21554465/2s83zfQkaS
 
 ## 💻Como Rodar o Projeto Localmente
 
@@ -48,7 +48,7 @@ DB_DATABASE = (edite aqui e coloque o nome do banco de dados)
 
 Por padrão a aplicação rodará localmente na porta 3000.
 
-## 🛠Tecnologias Bibliotecas e aplicações Utilizadas
+## 🛠Tecnologias Bibliotecas e Aplicações Utilizadas
 
  <div style="display: inline_block"><br>
   <img align="center" alt="NodeJS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
@@ -58,8 +58,9 @@ Por padrão a aplicação rodará localmente na porta 3000.
   <img align="center" alt="MySQL" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain.svg">
   <img align="center" alt="Postman" height="30" width="40" src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg">
   <img align="center" alt="Heroku" height="30" width="40" src="https://www.svgrepo.com/show/353869/heroku-icon.svg">
+  |  Express  |   Cors   |
 </div>
-|  Express  |   Cors   |
+
 
 <h2 align="center">
 
