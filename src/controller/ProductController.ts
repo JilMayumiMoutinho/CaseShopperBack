@@ -102,8 +102,10 @@ export class ProductController {
   public delPurchaseItem = async (req: Request, res: Response) => {
     try {
       const id_purchase = req.params.id_purchase!;
+      const quantity = req.body.quantity;
+      const id_product = req.body.id_product!;
 
-      const response = await this.productBusiness.delPurchaseFromCart(id_purchase);
+      const response = await this.productBusiness.delPurchaseFromCart(id_purchase, quantity, id_product);
 
       res.status(201).send(response);
     } catch (error: any) {

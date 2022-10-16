@@ -163,10 +163,11 @@ export class ProductBusiness {
     if (existEnoughProductInCart.quantity === 0) {
       throw new UnprocessableError("You didn't buy that much!");
     }
+    const quantity = 1;
 
     const result = await this.productDatabase.putDelPurchaseById(id_purchase);
 
-    await this.productDatabase.putStockByIdDelPurchase(id_product);
+    await this.productDatabase.putStockByIdDelPurchase(id_product, quantity);
 
     return result;
   };
@@ -184,7 +185,11 @@ export class ProductBusiness {
     return allPurchase;
   };
 
-  public delPurchaseFromCart = async (id_purchase: string) => {
+  public delPurchaseFromCart = async (
+    id_purchase: string,
+    quantity: number,
+    id_product: string
+  ) => {
     if (!id_purchase) {
       throw new ParamsError("You must inform all data");
     }
@@ -198,6 +203,11 @@ export class ProductBusiness {
     }
 
     const result = await this.productDatabase.delPurchaseFromCart(id_purchase);
+
+    await this.productDatabase.putStockByIdDelPurchase(
+      id_product,
+      Number(quantity)
+    );
 
     return { message: result };
   };

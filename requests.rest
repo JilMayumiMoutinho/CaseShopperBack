@@ -41,7 +41,7 @@ Content-Type: application/json
 }
 
 ### 6) Put sub purchase
-PUT https://case-shopper-jil.herokuapp.com/product/subOnPurchase
+PUT http://localhost:3003/subOnPurchase
 Content-Type: application/json
 
 {
@@ -61,6 +61,13 @@ Content-Type: application/json
 }
 
 ### 9) Del purchase
-DELETE http://localhost:3003/product/delPurchase/fb47de77-af03-45db-ae91-7fb2bd13cfc6
+DELETE http://localhost:3003/product/delPurchase/b65afa32-4079-4707-a229-b424bce497f4
+Content-Type: application/json
+
+{
+"quantity": 5,
+"id_product": "79"
+}
+
 
 ##############################

@@ -56,13 +56,15 @@ export class ProductDatabase extends BaseDatabase {
   };
 
   public putStockByIdDelPurchase = async (
-    id_product: string
+    id_product: string, quantity: number
   ): Promise<string> => {
+
+    if(quantity === null || undefined){quantity=1};
     const productDB = await this.getConnection()
       .select("*")
       .from(ProductDatabase.TABLE_PRODUCTS)
       .where({ id: id_product })
-      .increment("qty_stock", 1);
+      .increment("qty_stock", quantity);
 
     return `Quantity added in stock successfuly`;
   };
