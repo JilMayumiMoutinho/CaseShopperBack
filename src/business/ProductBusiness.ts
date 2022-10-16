@@ -163,7 +163,7 @@ export class ProductBusiness {
     if (existEnoughProductInCart.quantity === 0) {
       throw new UnprocessableError("You didn't buy that much!");
     }
-    const quantity = 1;
+    let quantity = 1;
 
     const result = await this.productDatabase.putDelPurchaseById(id_purchase);
 

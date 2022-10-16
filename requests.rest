@@ -4,12 +4,8 @@ GET https://case-shopper-jil.herokuapp.com/product/all/2
 // https://case-shopper-jil.herokuapp.com/product/all/1/?search=ener
 
 ### 2) Get product by id
-GET https://case-shopper-jil.herokuapp.com/product/byId/79
-Content-Type: application/json
+GET http://localhost:/product/byId/79
 
-{
-    "id": "79"
-}
 
 ### 3) POST cart
 POST http://localhost:3003/cart/create
