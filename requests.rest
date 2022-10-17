@@ -1,11 +1,8 @@
 ### 1) Get all products
-GET https://case-shopper-jil.herokuapp.com/product/all/2
-
-// https://case-shopper-jil.herokuapp.com/product/all/1/?search=ener
+GET https://case-shopper-jil.herokuapp.com/product/all/1/?search=&order=DESC&sort=price
 
 ### 2) Get product by id
 GET http://localhost:/product/byId/79
-
 
 ### 3) POST cart
 POST http://localhost:3003/cart/create
@@ -57,13 +54,6 @@ Content-Type: application/json
 }
 
 ### 9) Del purchase
-DELETE http://localhost:3003/product/delPurchase/b65afa32-4079-4707-a229-b424bce497f4
-Content-Type: application/json
-
-{
-"quantity": 5,
-"id_product": "79"
-}
-
+DELETE http://localhost:3003/product/delPurchase/3d9931fe-f8bc-408a-9214-e8f933e31c3f/?id_product=79&quantity=3&
 
 ##############################
