@@ -4,7 +4,6 @@
 Elaboração de site (backend) com cadastro de usuário para poder realizar os pedidos. 
 O sistema foi escrito TypeScript (node.js e/ou react.js).
 Foi recebido uma lista com produtos disponíveis em formato csv com seus respectivos preços e estoque, porém sem fotos. Este arquivo foi convertido em JSON para inclusão no banco de dados. 
-
 <h4/>
 
 <h3 align="center"> Sumário </h3>
