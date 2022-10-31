@@ -17,4 +17,3 @@ productRouter.put("/addOnPurchase", productController.putSumPurchase);
 productRouter.put("/subOnPurchase", productController.putSubPurchase);
 productRouter.get("/allPurchase/:id_cart", productController.getAllPurchase);
 productRouter.delete("/delPurchase/:id_purchase", productController.delPurchaseItem);
-

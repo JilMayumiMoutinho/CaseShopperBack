@@ -10,15 +10,28 @@ export interface IPutPurchaseInputDB {
   id_purchase: string;
 }
 
-export interface IPostInputDB {
-  id_cart: string,
-  id_product: string,
-  price: number,
-  name: string
+export interface IDelCartInputDB extends IPutPurchaseInputDB{
+  quantity: number;
 }
 
-export interface IPostInputIdDB extends IPostInputDB{
-  id_purchase: string
+export interface IStockInputDB {
+  id_product: string;
+  quantity: number;
+}
+
+export interface IPurInputDB {
+  id_cart: string;
+  id_product: string;
+}
+
+export interface IPostInputDB {
+  id_cart: string;
+  id_product: string;
+  price: number;
+}
+
+export interface IPostInputIdDB extends IPostInputDB {
+  id_purchase: string;
 }
 
 export interface IPurchaseInputDB {

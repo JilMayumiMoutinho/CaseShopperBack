@@ -2,7 +2,7 @@ import { CartDatabase } from "../database/CartDatabase";
 import { ProductDatabase } from "../database/ProductDatabase";
 import { NotFoundError } from "../errors/NotFoundError";
 import { ParamsError } from "../errors/ParamsError";
-import { Cart, ICartInputDB } from "../models/Cart";
+import { Cart, ICartInputDB, ITotalInputDB } from "../models/Cart";
 import { IPurchaseInputDB } from "../models/Products";
 import { IdGenerator } from "../services/IdGenerator";
 
@@ -23,7 +23,7 @@ export class CartBusiness {
     if (new Date(delivery_date) <= new Date()) {
       throw new ParamsError("Delivery date must be tomorrow or later");
     }
-    
+
     const id_cart = this.idGenerator.generate();
 
     const newCart = new Cart(id_cart, client_name, delivery_date);
@@ -52,7 +52,12 @@ export class CartBusiness {
       }
     }
 
-    const result = await this.cartDatabase.putTotalCart(id_cart, balance);
+    const input: ITotalInputDB = {
+      id_cart: id_cart,
+      total: balance,
+    };
+
+    const result = await this.cartDatabase.putTotalCart(input);
 
     return { message: result, totalBalance: balance };
   }

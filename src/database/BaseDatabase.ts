@@ -18,5 +18,5 @@ export abstract class BaseDatabase {
 
   protected getConnection() {
     return BaseDatabase.connection;
-  }
-}
+  };
+};

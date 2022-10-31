@@ -48,15 +48,13 @@ class Migrations extends BaseDatabase {
         );
 
         CREATE TABLE IF NOT EXISTS ${ProductDatabase.TABLE_PURCHASES}(
+          id_purchase VARCHAR(255) PRIMARY KEY,
           id_cart VARCHAR(255) NOT NULL,
           id_product VARCHAR(255) NOT NULL,
-          id_purchase VARCHAR(255) PRIMARY KEY,
           price DOUBLE(4,2) NOT NULL,   
-          quantity INT NOT NULL,
-          name VARCHAR(255) NOT NULL,         
+          quantity INT NOT NULL,      
           FOREIGN KEY (id_cart) REFERENCES ${CartDatabase.TABLE_CART}(id_cart),
-          FOREIGN KEY (id_product) REFERENCES ${ProductDatabase.TABLE_PRODUCTS}(id),
-          FOREIGN KEY (name) REFERENCES ${ProductDatabase.TABLE_PRODUCTS}(name)
+          FOREIGN KEY (id_product) REFERENCES ${ProductDatabase.TABLE_PRODUCTS}(id)
         );
     `);
   };

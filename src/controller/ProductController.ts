@@ -4,6 +4,7 @@ import {
   ISearchProduct,
   IPostInputDB,
   IPutPurchaseInputDB,
+  IDelCartInputDB,
 } from "../models/Products";
 
 export class ProductController {
@@ -46,7 +47,6 @@ export class ProductController {
         id_cart: req.body.id_cart!,
         id_product: req.body.id_product!,
         price: req.body.price,
-        name: req.body.name!,
       };
 
       const response = await this.productBusiness.postPurchase(input);
@@ -101,15 +101,17 @@ export class ProductController {
 
   public delPurchaseItem = async (req: Request, res: Response) => {
     try {
-      const id_purchase = req.params.id_purchase!;
-      const quantity = Number(req.query.quantity);
-      const id_product = req.query.id_product as string;
+      const input: IDelCartInputDB = {
+        id_purchase: req.params.id_purchase!,
+        quantity: Number(req.query.quantity),
+        id_product: req.query.id_product as string,
+      };
 
-      const response = await this.productBusiness.delPurchaseFromCart(id_purchase, quantity, id_product);
+      const response = await this.productBusiness.delPurchaseFromCart(input);
 
       res.status(201).send(response);
     } catch (error: any) {
       res.status(400).send({ message: error.message || error.sqlMessage });
     }
   };
-}
+};

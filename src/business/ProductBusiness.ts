@@ -10,6 +10,9 @@ import {
   ISearchProduct,
   IPurchaseInputDB,
   Product,
+  IStockInputDB,
+  IDelCartInputDB,
+  IPurInputDB,
 } from "../models/Products";
 import { IdGenerator } from "../services/IdGenerator";
 
@@ -67,10 +70,10 @@ export class ProductBusiness {
   };
 
   public postPurchase = async (input: IPostInputDB) => {
-    const { id_cart, id_product, name } = input;
+    const { id_cart, id_product } = input;
     const price = Number(input.price);
 
-    if (!id_cart || !id_product || !price || !name) {
+    if (!id_cart || !id_product || !price) {
       throw new ParamsError("You must inform all data");
     }
 
@@ -92,10 +95,11 @@ export class ProductBusiness {
       );
     }
 
-    const existPurchase = await this.productDatabase.getPurchase(
+    const inputPur: IPurInputDB = {
       id_product,
-      id_cart
-    );
+      id_cart,
+    };
+    const existPurchase = await this.productDatabase.getPurchase(inputPur);
 
     if (existPurchase) {
       throw new UnprocessableError(
@@ -109,8 +113,7 @@ export class ProductBusiness {
       id_cart,
       id_product,
       id_purchase,
-      price,
-      name,
+      price
     };
 
     const result = await this.productDatabase.postPurchase(newPurchase);
@@ -163,11 +166,15 @@ export class ProductBusiness {
     if (existEnoughProductInCart.quantity === 0) {
       throw new UnprocessableError("You didn't buy that much!");
     }
-    let quantity = 1;
 
     const result = await this.productDatabase.putDelPurchaseById(id_purchase);
 
-    await this.productDatabase.putStockByIdDelPurchase(id_product, quantity);
+    let quantity: number = 1;
+    const inputToStock: IStockInputDB = {
+      id_product,
+      quantity,
+    };
+    await this.productDatabase.putStockByIdDelPurchase(inputToStock);
 
     return result;
   };
@@ -181,15 +188,12 @@ export class ProductBusiness {
     if (!allPurchase?.length) {
       throw new NotFoundError("There's no purchase in this cart");
     }
-
     return allPurchase;
   };
 
-  public delPurchaseFromCart = async (
-    id_purchase: string,
-    quantity: number,
-    id_product: string
-  ) => {
+  public delPurchaseFromCart = async (input: IDelCartInputDB) => {
+    const { id_purchase, id_product } = input;
+    const quantity = Number(input.quantity);
     if (!id_purchase) {
       throw new ParamsError("You must inform all data");
     }
@@ -204,10 +208,11 @@ export class ProductBusiness {
 
     const result = await this.productDatabase.delPurchaseFromCart(id_purchase);
 
-    await this.productDatabase.putStockByIdDelPurchase(
+    const inputDel: IStockInputDB = {
       id_product,
-      Number(quantity)
-    );
+      quantity,
+    };
+    await this.productDatabase.putStockByIdDelPurchase(inputDel);
 
     return { message: result };
   };

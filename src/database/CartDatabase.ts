@@ -1,5 +1,4 @@
-/* import { IPutProductInputDB } from "../models/Cart"; */
-import { Cart } from "../models/Cart";
+import { Cart, ITotalInputDB } from "../models/Cart";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class CartDatabase extends BaseDatabase {
@@ -15,8 +14,8 @@ export class CartDatabase extends BaseDatabase {
     return `${cart.getName()} created successfully`;
   };
 
-  public putTotalCart = async (id_cart: string, total: number
-  ): Promise<string> => {
+  public putTotalCart = async (input: ITotalInputDB): Promise<string> => {
+    const { id_cart, total } = input;
     await this.getConnection()
       .update({ total })
       .where({ id_cart })
@@ -24,4 +23,4 @@ export class CartDatabase extends BaseDatabase {
 
     return `Total balance updated successfully`;
   };
-}
+};

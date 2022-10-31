@@ -4,4 +4,4 @@ export class IdGenerator {
     public generate = (): string => {
         return v4()
     }
-}
+};

@@ -1,6 +1,8 @@
 ### 1) Get all products
 GET https://case-shopper-jil.herokuapp.com/product/all/1/?search=&order=DESC&sort=price
 
+//https://case-shopper-jil.herokuapp.com/product/all/2
+
 ### 2) Get product by id
 GET http://localhost:/product/byId/79
 
@@ -20,8 +22,7 @@ Content-Type: application/json
 {
 "id_cart": "5eb45432-1d8a-465d-af2f-d6a0593d5d18",
 "id_product": "79",
-"price": 7.99,
-"name": "ÁGUA MINERAL SEM GÁS CRYSTAL GARRAFÃO 5L"
+"price": 7.99
 }
 
 ### 5) Put add purchase

@@ -3,6 +3,11 @@ export interface ICartInputDB {
   delivery_date: Date;
 }
 
+export interface ITotalInputDB {
+  id_cart: string;
+  total: number;
+}
+
 export class Cart {
   constructor(
     private id_cart: string,
@@ -27,3 +32,4 @@ export class Cart {
     return this.total;
   };
 }
+
