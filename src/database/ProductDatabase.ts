@@ -21,8 +21,7 @@ export class ProductDatabase extends BaseDatabase {
 
     const ProductsDB: IProductDB[] = await this.getConnection()
       .select("*")
-      .where("qty_stock", ">", "0")
-      .andWhere("name", "like", `%${search}%`)
+      .where("name", "like", `%${search}%`)
       .limit(limit)
       .offset(offset)
       .orderBy(sort, order)
